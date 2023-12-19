@@ -1,0 +1,170 @@
+:root {
+  --tipo-titulo: 'Cinzel Decorative', serif;
+  --tipo-titulo-secundario: 'Cinzel', serif;
+  --tipo-texto: 'Fauna One', serif;
+}
+
+img figure {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.header {
+  width: 100%;
+  min-height: 5em;
+  background: lightblue;
+
+  padding: 1em 2em;
+
+  display: none;
+  flex-flow: row wrap;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .h1{}
+
+.header .h1 .a{}
+
+.header .nav {}
+
+.header .ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .ul .li{
+  margin: 1em;
+}
+.header .ul .li .a{}
+
+.main{
+  background: lightgray;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.seccion{
+  width: 100%;
+  min-height: 80vh;
+  background: lightgreen;
+  margin: 1em 0;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.seccion .circulos{}
+.seccion .circulos .circulo{}
+.seccion .ul{
+  /* background: red; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.seccion .ul .li{
+  /* background: green; */
+  margin: 0 1em;
+}
+.seccion .ul .a{}
+.seccion .h2{}
+.seccion .h3{}
+
+.seccion .p{}
+.seccion .grid{
+  width: 90%;
+  max-width: 40em;
+  background: lightcoral;
+
+  margin: 1em 0;
+
+  display: grid;
+  grid-template-columns: repeat( auto-fit , minmax( 10rem, 1fr ));
+  gap: 1em;
+}
+.seccion .article{
+  width: 100%;
+  min-height: 20vh;
+  background: lightgoldenrodyellow;
+
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.seccion .a{}
+.seccion .figure{
+  width: 100%;
+  background: red;
+}
+.seccion .img{
+  width: 100%;
+  background: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.seccion .h4{
+  width: 100%;
+  height: 50%;
+  background: coral;
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.about{}
+.about .h2{
+  margin: 0 0 2rem;
+}
+.about .p{
+  max-width: 40em;
+  background: lightsalmon;
+  text-align: left;
+  margin: 0 0 1em;
+}
+.about .rrss{
+  width: 100%;
+  background: salmon;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.about .li{
+  margin: 0 1em;
+  background: orange;
+}
+.about .a{}
+.about .svg{
+  width: 2em;
+  height: 2em;
+  /* background: red; */
+}
+
+.footer{
+  background: pink;
+
+  padding: 2em 0;
+  text-align: center;
+}
+.footer .span{}
+
