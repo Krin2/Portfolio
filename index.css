@@ -1,99 +1,245 @@
+/* Definiciones Generales */
 :root {
   --tipo-titulo: 'Cinzel Decorative', serif;
   --tipo-titulo-secundario: 'Cinzel', serif;
-  --tipo-texto: 'Fauna One', serif;
+  --tipo-texto: 'Lora', serif;
+
+  --blanco: white;
+  --github-color: black;
+  --linkedin-color: blue;
+  --background-icons: white;
+  --body-background: black;
+  --bi-border-color: gold;
+  --header-background: purple;
+  --header-menu-background: rgb(111, 0, 111);
+  --header-hover-shadow: magenta;
+  --box-shadow: purple;
+  --info-a-border: rgb(255,255,255,.5);
+  --info-font-color: white;
+  --title-color: white;
+  --subtitle-color: white;
+  --text-shadow: purple;
+  --jobs-initial-background: purple;
+  --h4-hover-shadow: gold;
+  --footer-font: grey;
+  --cursor-background: white;
+
+
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 img figure {
   max-width: 100%;
   width: 100%;
+
   display: flex;
   object-fit: cover;
   object-position: center center;
 }
 
+body{
+  color: var(--blanco);
+  background-color: var(--body-background);
+  min-width: 300px;
+  cursor: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  cursor: none;
+}
+
+/* Iconos */
+.bi {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--bi-border-color);
+  background: var(--background-icons);
+  margin: .2rem;
+}
+.bi-github {
+  fill: var(--github-color);
+}
+.bi-linkedin {
+  fill: var(--linkedin-color);
+}
+
+/* Estilos Header */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+  padding: 0.5em;
   width: 100%;
-  min-height: 5em;
-  background: lightblue;
-
-  padding: 1em 2em;
-
-  display: none;
-  flex-flow: row wrap;
-
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header .h1{}
-
-.header .h1 .a{}
-
-.header .nav {}
-
-.header .ul{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background: var(--header-background);
+
 }
 
-.header .ul .li{
-  margin: 1em;
+.header .img {
+  width: 4rem;
+  height: 4rem;
+  top: 0;
+  left: 0;
+
+  border-radius: 50%;
+  border: 2px solid var(--bi-border-color);
 }
-.header .ul .li .a{}
-
-.main{
-  background: lightgray;
-  margin: 1em 0;
-  text-align: center;
+.header .a{
+  text-decoration: none;
 }
 
-.seccion{
-  width: 100%;
-  min-height: 80vh;
-  background: lightgreen;
-  margin: 1em 0;
-
+.header .nav {
+  max-width: 80%;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.header .nav .a{
+  padding: .3em;
+  color: var(--blanco);
+  background-color: var(--header-menu-background);
+  text-decoration: none;
+  border-radius: .2rem;
+}
+
+.header .nav .a:hover{
+  color: black;
+  background-color: var(--header-hover-shadow);
+  opacity: .9;
+  box-shadow:
+   0rem .3rem .5rem var(--header-hover-shadow),
+   0rem -.3rem .5rem var(--header-hover-shadow);
+}
+
+.main {
+  position: relative;
+  top: 5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-.seccion .circulos{}
-.seccion .circulos .circulo{}
+
+.seccion {
+  width: 90%;
+  box-shadow:
+   0rem 1rem 1rem var(--box-shadow),
+   0rem -1rem 1rem var(--box-shadow);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+/* Estilos Seccion Info */
+.seccion .info{
+  max-width: 100%;
+  margin: 1em 0px;
+  font-size: 1.2em;
+  animation: aparecer1 2s ease 1 both;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .seccion .ul{
   /* background: red; */
+  margin: 2em;
+  gap: 2em;
+  padding-inline-start: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 .seccion .ul .li{
-  /* background: green; */
-  margin: 0 1em;
+  display: contents;
 }
-.seccion .ul .a{}
-.seccion .h2{}
-.seccion .h3{}
 
-.seccion .p{}
+.seccion .ul .a{
+  border-top: 2px solid var(--info-a-border);
+  border-radius: 50%;
+  padding: 1em 1em 1em;
+
+  text-decoration-line: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--info-font-color);
+
+  transition: all .5s ease;
+}
+
+.seccion .ul>:nth-child(2) .a{
+  animation-delay: 1s;
+}
+
+.seccion .ul .a:hover{
+  background-color:var(--box-shadow);
+  border-bottom: 2px solid var(--info-a-border);
+  box-shadow: 1rem 1rem 1rem var(--box-shadow);
+  animation-delay: 1s;
+}
+
+.seccion .h2{
+  margin: 0px;
+
+  font-family: var(--tipo-titulo);
+  font-weight: 600;
+  font-size: 4em;
+  color: var(--title-color);;
+
+  line-height: 1em;
+}
+
+.seccion .h2:hover, .h3:hover, strong {
+  text-shadow: .2rem .2rem .3rem var(--text-shadow),
+    -.2rem .2rem .3rem var(--text-shadow),
+    .2rem -.2rem .3rem var(--text-shadow),
+    -.2rem -.2rem .3rem var(--text-shadow);
+}
+
+.seccion .h3{
+  margin: 1em 0;
+
+  font-family: var(--tipo-titulo-);
+  font-size: 3em;
+}
+
+/* Estilos Seccion Trabajos */
+.seccion .p{
+  font-family: var(--tipo-texto);
+  font-size: 2em;
+  text-decoration: underline var(--text-shadow);
+  text-underline-offset: 0.5rem;
+}
 .seccion .grid{
   width: 90%;
-  max-width: 40em;
-  background: lightcoral;
 
   margin: 1em 0;
 
   display: grid;
-  grid-template-columns: repeat( auto-fit , minmax( 10rem, 1fr ));
+  grid-template-columns: repeat( auto-fit , minmax( 15rem, 1fr ));
   gap: 1em;
 }
+
 .seccion .article{
-  width: 100%;
+  max-width: 30vh;
   min-height: 20vh;
-  background: lightgoldenrodyellow;
 
   display: flex;
   flex-flow: nowrap;
@@ -101,70 +247,200 @@ img figure {
   align-items: center;
 
   position: relative;
+  overflow: hidden;
 }
-.seccion .a{}
+
 .seccion .figure{
-  width: 100%;
-  background: red;
+  max-width: 15rem;
 }
+
 .seccion .img{
   width: 100%;
-  background: green;
+  max-width: 15rem;
+  height: 100%;
+  
   position: absolute;
   top: 0;
   left: 0;
 }
-.seccion .h4{
+
+.seccion .h4 {
   width: 100%;
+  max-width: 15rem;
   height: 50%;
-  background: coral;
+
+  background-color: var(--jobs-initial-background);
+  backdrop-filter: blur(1rem);
   
   position: absolute;
   bottom: 0;
-  left: 0;
-
+  left: 1px;
+  
   display: flex;
   flex-flow: nowrap;
   justify-content: center;
   align-items: center;
-
+  
+  color: var(--subtitle-color);
+  font-size: 1.4em;
+  font-family: var(--tipo-titulo-secundario);
+  font-style: italic;
+  opacity: 0;
+  margin: 0 0 1em;
+  
+  transition: all .5s ease; 
 }
 
-.about{}
+
+.seccion .article:hover .h4 {
+  opacity: .9;
+  transform: translateZ(1) scale(.7);
+
+  box-shadow:
+  0rem .3rem .5rem var(--h4-hover-shadow),
+  0rem -.3rem .5rem var(--h4-hover-shadow);
+}
+
+
+/* Estilos Seccion About */
+.about{
+  margin-top: 3em;
+}
+
 .about .h2{
   margin: 0 0 2rem;
 }
 .about .p{
-  max-width: 40em;
-  background: lightsalmon;
+  /* background: lightsalmon; */
   text-align: left;
-  margin: 0 0 1em;
+  font-size: 1.3em;
+  text-decoration: none;
+  margin: 0 1rem 1rem 1rem;
+  width: 100%;
 }
+
 .about .rrss{
   width: 100%;
-  background: salmon;
 
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+
+  gap: 2em;
 }
+
 .about .li{
   margin: 0 1em;
-  background: orange;
+  display: contents;
 }
-.about .a{}
+
 .about .svg{
+  width: 4em;
+  height: 4em;
+}
+
+/* Estilos Footer */
+.footer{
+  color:var(--footer-font);
+  position: relative;
+  z-index: 2;
+
+  margin-top: 2rem;
+  padding: 2em 2em;
+  text-align: left;
+}
+.footer .a:hover {
+  text-shadow: .2rem .2rem .3rem white,
+    -.2rem .2rem .3rem white,
+    .2rem -.2rem .3rem white,
+    -.4rem -.4rem .3rem white;
+}
+
+
+/* Efectos */
+@keyframes aparecer1 {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes efectoHeader {
+  from {
+    opacity: .8;
+    transform: rotate(0deg) scale(.5);
+  }
+  to {
+    opacity: .7;
+    transform: rotate(720deg) scale(5);
+  }
+}
+
+/* Efectos pantalla*/
+@media screen and (max-width: 1030px){
+
+  .seccion .figure{
+    width: 15rem;
+  }
+
+  .seccion .ul .a .span{
+    display: none;
+  }
+
+  .seccion .grid{
+    min-width: 15rem;
+  }
+  
+  .seccion .h2{
+    font-size: 2em;
+  }
+
+  .seccion .h2:hover, .h3:hover, strong {
+    text-shadow: .1rem .1rem .15rem var(--text-shadow),
+      -.1rem .1rem .15rem var(--text-shadow),
+      .1rem -.1rem .15rem var(--text-shadow),
+      -.1rem -.1rem .15rem var(--text-shadow);
+  }
+
+  .seccion .h3{
+    font-size: 1.5em;
+  }
+
+  .seccion .p{
+    font-size: 1em;
+    text-underline-offset: 0.25rem;
+  }
+}
+
+
+/* Efectos cursor */
+#cursor {
   width: 2em;
   height: 2em;
-  /* background: red; */
+  background: var(--cursor-background);;
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: lighten;
 }
 
-.footer{
-  background: pink;
-
-  padding: 2em 0;
-  text-align: center;
+#cursor.mini {
+  transform: scale(0.7);
+  transition: all .1s linear;
 }
-.footer .span{}
+#cursor.big {
+  transform: scale(1.2);
+  transition: all .1s linear;
+}
+/* Image by <a href="https://www.freepik.com/free-photo/html-system-website-concept_41740250.htm#query=desarrollador&position=23&from_view=search&track=ais&uuid=7901394f-53ad-4b43-92d8-ed90295a917c">Freepik</a> */
 
+
+/* <a href="https://www.freepik.com/free-photo/modern-automobile-production-line-automated-production-equipment-shop-assembly-new-modern-cars-way-assembly-car-assembly-line-plant_26150962.htm#query=plc&position=42&from_view=search&track=sph&uuid=c9c390ba-ba0d-4fba-bee0-beff5cbd814c">Image by usertrmk</a> on Freepik */ */
