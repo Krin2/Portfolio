@@ -1,0 +1,3 @@
+# Always LF in the working tree, also on Windows: Prettier (and CI on Linux) expect LF, and
+# git's automatic CRLF conversion made the format check fail after switching branches.
+* text=auto eol=lf
