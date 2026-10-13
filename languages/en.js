@@ -1,0 +1,70 @@
+window.LANGUAGES = window.LANGUAGES || {}
+window.LANGUAGES.en = {
+  'meta.title': 'Marcos Frigerio | Backend Developer',
+  'meta.description': 'Marcos Frigerio\'s portfolio: electronic engineer with 10 years in automation, now a backend developer on the way to fullstack.',
+  'meta.ogTitle': 'Marcos Frigerio | Backend Developer',
+  'meta.ogDescription': 'Projects and experience of Marcos Frigerio: backend, frontend and industrial automation.',
+
+  'accessibility.skip': 'Skip to content',
+  'accessibility.home': 'Home',
+  'accessibility.mainNav': 'Main',
+  'accessibility.brandPhoto': 'Photo of Marcos Frigerio',
+  'accessibility.themeToLight': 'Switch to light mode',
+  'accessibility.themeToDark': 'Switch to dark mode',
+  'accessibility.themeTitle': 'Toggle theme',
+  'accessibility.langSwitch': 'Change language to Spanish',
+  'accessibility.langTitle': 'Change language',
+  'lang.label': 'ES',
+
+  'nav.projects': 'Projects',
+  'nav.skills': 'Skills',
+  'nav.about': 'About me',
+  'nav.contact': 'Contact',
+
+  'hero.eyebrow': 'Hi, I\'m',
+  'hero.role': 'Backend Developer',
+  'hero.lead': 'Electronic engineer with 10 years in industrial automation. Today I build backend software and I\'m moving towards fullstack.',
+  'hero.viewProjects': 'View projects',
+
+  'projects.title': 'Projects',
+  'projects.backend': 'Backend',
+  'projects.frontend': 'Frontend',
+  'projects.automation': 'Automation',
+  'projects.demo': 'View demo →',
+  'projects.soon': 'Coming soon',
+
+  'pokedex.alt': 'Screenshot of the Pokedex',
+  'pokedex.desc': 'Pokémon search tool that consumes a public API.',
+  'weather.name': 'Weather-console',
+  'weather.alt': 'Screenshot of the console weather app',
+  'weather.desc': 'Console application to check the weather.',
+  'tables.name': 'Tables by command',
+  'tables.alt': 'Screenshot of Tables by command',
+  'tables.desc': 'Table generation from commands.',
+  'frigo.alt': 'Screenshot of the Frigo project',
+  'frigo.desc': 'Built with plain HTML, CSS and JavaScript.',
+  'plc.name': 'PLC Programming',
+  'plc.alt': 'Control panel with a PLC',
+  'plc.desc': 'Controller programming for industrial processes.',
+  'hmi.name': 'HMI Development',
+  'hmi.alt': 'Industrial HMI screen',
+  'hmi.desc': 'Design of human-machine interfaces.',
+  'office.name': 'Project Office',
+  'office.alt': 'Project office',
+  'office.desc': 'Project management and technical documentation.',
+
+  'skills.title': 'Skills',
+  'skills.backend': 'Backend',
+  'skills.react': 'React <small>(in progress)</small>',
+  'skills.automation': 'Industrial automation',
+
+  'about.title': 'About me',
+  'about.p1': 'I was born in the province of Salta (Argentina), studied <strong>Electronic Engineering</strong> at the National University of Córdoba and currently live in Rafaela.',
+  'about.p2': 'I worked for 10 years as an automation specialist on various projects and companies.',
+  'about.p3': 'Today I\'m a <strong>backend developer</strong> and my goal is to become <strong>fullstack</strong>, so I\'m taking a <strong>React</strong> course.',
+
+  'contact.title': 'Contact',
+  'contact.lead': 'Have a project or want to chat? Write to me.',
+
+  'footer.rights': '© 2026 Marcos Frigerio'
+}

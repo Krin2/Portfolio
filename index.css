@@ -10,8 +10,23 @@
   --accent: #d4af37;
   --accent-text: #0d0d12;
 
+  --header-bg: rgb(13 13 18 / .8);
+
   --radius: .75rem;
   --header-h: 4rem;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f7fa;
+  --surface: #ffffff;
+  --border: #dcdce5;
+  --text: #1a1a22;
+  --muted: #565665;
+  --accent: #8a6d0b;
+  --accent-text: #ffffff;
+  --header-bg: rgb(247 247 250 / .85);
+  color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -46,7 +61,7 @@ a { color: inherit; }
   height: var(--header-h);
   padding: 0 clamp(1rem, 4vw, 3rem);
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  background: rgb(13 13 18 / .8);
+  background: var(--header-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -58,6 +73,25 @@ a { color: inherit; }
   color: var(--muted); font-size: .95rem; transition: color .2s, background .2s;
 }
 .nav a:hover, .nav a.active { color: var(--text); background: var(--surface); }
+
+.header__actions { display: flex; align-items: center; gap: .5rem; }
+.lang-toggle {
+  height: 2.4rem; min-width: 2.4rem; padding: 0 .7rem;
+  border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+  transition: border-color .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); }
+.theme-toggle {
+  width: 2.4rem; height: 2.4rem; display: grid; place-items: center;
+  border-radius: 50%; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); cursor: pointer; transition: border-color .2s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle svg { width: 1.2rem; height: 1.2rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .i-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .i-sun { display: block; }
+:root[data-theme="light"] .theme-toggle .i-moon { display: none; }
 
 /* Layout */
 main { max-width: 68rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
