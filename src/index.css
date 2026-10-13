@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+/* Tokens del tema: colores y tipografia disponibles como bg-bg, text-muted, font-title, etc. */
+@theme {
+  --font-title: 'Cinzel', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-bg: #0d0d12;
+  --color-surface: #17171f;
+  --color-border: #2a2a36;
+  --color-text: #ececf1;
+  --color-muted: #a3a3b2;
+  --color-accent: #d4af37;
+  --color-accent-text: #0d0d12;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
