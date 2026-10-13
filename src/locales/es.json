@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Marcos Frigerio | Fullstack Developer",
+    "title": "Marcos Frigerio | Desarrollador Fullstack",
     "description": "Portfolio de Marcos Frigerio: desarrollador fullstack con experiencia en React, TypeScript y Node.js, y 10 años previos en automatización industrial.",
     "ogDescription": "Experiencia, habilidades y proyectos de Marcos Frigerio: desarrollo fullstack y automatización industrial."
   },
@@ -29,9 +29,10 @@
   },
   "hero": {
     "eyebrow": "Hola, soy",
-    "role": "Fullstack Developer",
+    "role": "Desarrollador Fullstack",
     "lead": "Ingeniero electrónico con 10 años en automatización industrial. Hoy desarrollo software con React, TypeScript y Node.js para clientes de EEUU y Europa.",
-    "viewProjects": "Ver proyectos"
+    "viewProjects": "Ver proyectos",
+    "downloadCv": "Descargar CV (PDF)"
   },
   "experience": {
     "title": "Experiencia",

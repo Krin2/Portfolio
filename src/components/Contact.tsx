@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { contact } from '../data/contact'
 import LinkButton from './LinkButton'
 import Section from './Section'
 
@@ -9,10 +10,10 @@ export default function Contact() {
     <Section id="contact" title={t('contact.title')}>
       <p className="text-muted max-w-2xl">{t('contact.lead')}</p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <LinkButton variant="primary" href="mailto:ingmarcosfrigerio@gmail.com">
-          ingmarcosfrigerio@gmail.com
+        <LinkButton variant="primary" href={`mailto:${contact.email}`}>
+          {contact.email}
         </LinkButton>
-        <LinkButton href="tel:+5493516839826">+549 351 6839826</LinkButton>
+        <LinkButton href={`tel:${contact.phone}`}>{contact.phoneDisplay}</LinkButton>
       </div>
     </Section>
   )

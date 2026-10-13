@@ -31,7 +31,8 @@
     "eyebrow": "Hi, I'm",
     "role": "Fullstack Developer",
     "lead": "Electronic engineer with 10 years in industrial automation. Today I build software with React, TypeScript and Node.js for clients in the US and Europe.",
-    "viewProjects": "View projects"
+    "viewProjects": "View projects",
+    "downloadCv": "Download CV (PDF)"
   },
   "experience": {
     "title": "Experience",

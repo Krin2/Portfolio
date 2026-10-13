@@ -15,7 +15,7 @@ describe('App', () => {
   it('muestra el nombre, el titulo y todas las secciones', () => {
     renderApp()
     expect(screen.getByRole('heading', { level: 1, name: 'Marcos Frigerio' })).toBeInTheDocument()
-    expect(screen.getByText('Fullstack Developer')).toBeInTheDocument()
+    expect(screen.getByText('Desarrollador Fullstack')).toBeInTheDocument()
     for (const name of [
       'Experiencia',
       'Habilidades',
@@ -60,6 +60,19 @@ describe('App', () => {
     const external = document.querySelectorAll('a[target="_blank"]')
     expect(external.length).toBeGreaterThan(0)
     external.forEach((link) => expect(link).toHaveAttribute('rel', 'noopener noreferrer'))
+  })
+
+  it('enlaza el CV en PDF del idioma activo', async () => {
+    renderApp()
+    const link = screen.getByRole('link', { name: 'Descargar CV (PDF)' })
+    expect(link).toHaveAttribute('href', expect.stringMatching(/Marcos-Frigerio-CV-ES\.pdf$/))
+    expect(link).toHaveAttribute('download')
+
+    await userEvent.click(screen.getByRole('button', { name: 'Cambiar idioma a inglés' }))
+    expect(screen.getByRole('link', { name: 'Download CV (PDF)' })).toHaveAttribute(
+      'href',
+      expect.stringMatching(/Marcos-Frigerio-CV-EN\.pdf$/),
+    )
   })
 
   it('abre y cierra el menu movil', async () => {

@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import profile from '../assets/perfil.jpg'
+import { contact, cvPath } from '../data/contact'
 import { GitHubIcon, LinkedInIcon } from './icons'
 import LinkButton from './LinkButton'
 import Section from './Section'
 
 export default function Hero() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <Section id="home" className="flex flex-col items-center py-16 text-center sm:py-24">
@@ -26,14 +27,13 @@ export default function Hero() {
         <LinkButton variant="primary" href="#projects">
           {t('hero.viewProjects')}
         </LinkButton>
-        <LinkButton href="https://github.com/Krin2" target="_blank" rel="noopener noreferrer">
+        <LinkButton href={cvPath(i18n.language)} download>
+          {t('hero.downloadCv')}
+        </LinkButton>
+        <LinkButton href={contact.github} target="_blank" rel="noopener noreferrer">
           <GitHubIcon className="size-[1.1rem]" /> GitHub
         </LinkButton>
-        <LinkButton
-          href="https://www.linkedin.com/in/marcos-frigerio/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <LinkButton href={contact.linkedin} target="_blank" rel="noopener noreferrer">
           <LinkedInIcon className="size-[1.1rem]" /> LinkedIn
         </LinkButton>
       </div>
