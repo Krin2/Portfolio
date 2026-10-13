@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import i18n from '../i18n'
+import i18n from '../localization'
 import '../index.css'
 import './cv.css'
 import CvDocument from './CvDocument'

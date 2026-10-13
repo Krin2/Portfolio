@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/vitest'
 import { afterEach, beforeEach } from 'vitest'
-import i18n from '../i18n'
+import i18n from '../localization'
 
 beforeEach(async () => {
   localStorage.clear()
