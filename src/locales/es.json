@@ -18,7 +18,9 @@
     "langTitle": "Cambiar idioma",
     "level": "Nivel {{level}} de {{max}}"
   },
-  "lang": { "label": "EN" },
+  "lang": {
+    "label": "EN"
+  },
   "nav": {
     "experience": "Experiencia",
     "skills": "Habilidades",
@@ -126,7 +128,6 @@
     },
     "demo": "Ver demo →",
     "code": "Ver código →",
-    "soon": "Próximamente",
     "items": {
       "graphToSql": {
         "name": "Graph to SQL migrator",
@@ -148,40 +149,10 @@
         "alt": "Tanque con los niveles HH y H encendidos y la entrada cerrada por nivel alto-alto",
         "desc": "Control de nivel de un tanque: programa PLC con interbloqueos y alarmas ISA-18.2, proceso simulado y una HMI de alto rendimiento, todo en TypeScript."
       },
-      "pokedex": {
-        "name": "Pokedex",
-        "alt": "Captura de la Pokedex",
-        "desc": "Buscador de Pokémon que consume una API pública."
-      },
-      "weather": {
-        "name": "Clima-consola",
-        "alt": "Captura de la aplicación de clima en consola",
-        "desc": "Aplicación de consola para consultar el clima."
-      },
-      "tables": {
-        "name": "Tablas por comando",
-        "alt": "Captura de Tablas por comando",
-        "desc": "Generación de tablas a partir de comandos."
-      },
       "frigo": {
         "name": "Frigo",
         "alt": "Captura del proyecto Frigo",
         "desc": "Hecho con HTML, CSS y JavaScript puro."
-      },
-      "plc": {
-        "name": "Programación PLC",
-        "alt": "Tablero con PLC",
-        "desc": "Programación de controladores para procesos industriales."
-      },
-      "hmi": {
-        "name": "Creación de HMI",
-        "alt": "Pantalla HMI industrial",
-        "desc": "Diseño de interfaces hombre-máquina."
-      },
-      "office": {
-        "name": "Oficina de Proyectos",
-        "alt": "Oficina de proyectos",
-        "desc": "Gestión y documentación técnica de proyectos."
       }
     }
   },
@@ -201,5 +172,7 @@
     "title": "Contacto",
     "lead": "¿Tenés un proyecto o querés charlar? Escribime."
   },
-  "footer": { "rights": "© 2026 Marcos Frigerio" }
+  "footer": {
+    "rights": "© 2026 Marcos Frigerio"
+  }
 }

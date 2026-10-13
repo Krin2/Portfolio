@@ -62,9 +62,6 @@ export default function ProjectCard({ project }: { project: Project }) {
             )}
           </div>
         )}
-        {project.soon && (
-          <span className="text-muted mt-auto pt-2 text-sm italic">{t('projects.soon')}</span>
-        )}
       </div>
     </article>
   )

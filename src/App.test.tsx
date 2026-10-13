@@ -28,10 +28,21 @@ describe('App', () => {
     }
   })
 
-  it('muestra las 11 tarjetas de proyecto', () => {
+  it('muestra solo los 5 proyectos actuales, sin los retirados', () => {
     const { container } = renderApp()
     const projects = container.querySelector('#projects')!
-    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(11)
+    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(5)
+
+    for (const removed of [
+      'Pokedex',
+      'Clima-consola',
+      'Tablas por comando',
+      'Programación PLC',
+      'Creación de HMI',
+      'Oficina de Proyectos',
+    ]) {
+      expect(screen.queryByText(removed)).not.toBeInTheDocument()
+    }
   })
 
   it('enlaza la demo y el codigo del simulador HMI / PLC', () => {

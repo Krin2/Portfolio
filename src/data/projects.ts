@@ -2,26 +2,9 @@ import graphToSql from '../assets/graph-to-sql.png'
 import componentLibrary from '../assets/component-library.png'
 import authFlow from '../assets/auth-flow.png'
 import hmiSimulator from '../assets/hmi-simulator.png'
-import pokedex from '../assets/pokedex.png'
-import weather from '../assets/clima-consola.png'
-import tables from '../assets/tablas.png'
 import frigo from '../assets/cta300.png'
-import plc from '../assets/PLC.jpg'
-import hmi from '../assets/hmi.jpg'
-import office from '../assets/vru2.jpg'
 
-export type ProjectId =
-  | 'graphToSql'
-  | 'componentLibrary'
-  | 'authFlow'
-  | 'hmiSimulator'
-  | 'pokedex'
-  | 'weather'
-  | 'tables'
-  | 'frigo'
-  | 'plc'
-  | 'hmi'
-  | 'office'
+export type ProjectId = 'graphToSql' | 'componentLibrary' | 'authFlow' | 'hmiSimulator' | 'frigo'
 export type ProjectGroup = 'backend' | 'frontend' | 'automation'
 
 export interface Project {
@@ -32,8 +15,6 @@ export interface Project {
   href?: string
   /** Enlace al repositorio en GitHub ("Ver codigo") */
   repo?: string
-  /** Muestra "Proximamente" en lugar del enlace */
-  soon?: boolean
   tags?: string[]
 }
 
@@ -49,9 +30,6 @@ export const projects: Project[] = [
     repo: 'https://github.com/Krin2/graph-to-sql-migrator',
     tags: ['Neo4j', 'SQL', 'SQLite', 'React', 'TypeScript', 'Tailwind'],
   },
-  { id: 'pokedex', group: 'backend', image: pokedex, href: 'https://krin2.github.io/pokedex/' },
-  { id: 'weather', group: 'backend', image: weather, soon: true },
-  { id: 'tables', group: 'backend', image: tables, href: 'https://krin2.github.io/tablas/' },
   {
     id: 'componentLibrary',
     group: 'frontend',
@@ -83,7 +61,4 @@ export const projects: Project[] = [
     repo: 'https://github.com/Krin2/hmi-plc-simulator',
     tags: ['PLC', 'HMI', 'ISA-18.2', 'ISA-101', 'React', 'TypeScript'],
   },
-  { id: 'plc', group: 'automation', image: plc },
-  { id: 'hmi', group: 'automation', image: hmi },
-  { id: 'office', group: 'automation', image: office },
 ]

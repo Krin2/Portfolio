@@ -18,7 +18,9 @@
     "langTitle": "Change language",
     "level": "Level {{level}} of {{max}}"
   },
-  "lang": { "label": "ES" },
+  "lang": {
+    "label": "ES"
+  },
   "nav": {
     "experience": "Experience",
     "skills": "Skills",
@@ -126,7 +128,6 @@
     },
     "demo": "View demo →",
     "code": "View code →",
-    "soon": "Coming soon",
     "items": {
       "graphToSql": {
         "name": "Graph to SQL migrator",
@@ -148,40 +149,10 @@
         "alt": "Tank with the HH and H level switches on and the inlet closed by the high-high level",
         "desc": "Tank level control: a PLC program with interlocks and ISA-18.2 alarms, a simulated process and a high-performance HMI, all in TypeScript."
       },
-      "pokedex": {
-        "name": "Pokedex",
-        "alt": "Screenshot of the Pokedex",
-        "desc": "Pokémon search tool that consumes a public API."
-      },
-      "weather": {
-        "name": "Weather-console",
-        "alt": "Screenshot of the console weather app",
-        "desc": "Console application to check the weather."
-      },
-      "tables": {
-        "name": "Tables by command",
-        "alt": "Screenshot of Tables by command",
-        "desc": "Table generation from commands."
-      },
       "frigo": {
         "name": "Frigo",
         "alt": "Screenshot of the Frigo project",
         "desc": "Built with plain HTML, CSS and JavaScript."
-      },
-      "plc": {
-        "name": "PLC Programming",
-        "alt": "Control panel with a PLC",
-        "desc": "Controller programming for industrial processes."
-      },
-      "hmi": {
-        "name": "HMI Development",
-        "alt": "Industrial HMI screen",
-        "desc": "Design of human-machine interfaces."
-      },
-      "office": {
-        "name": "Project Office",
-        "alt": "Project office",
-        "desc": "Project management and technical documentation."
       }
     }
   },
@@ -201,5 +172,7 @@
     "title": "Contact",
     "lead": "Have a project or want to chat? Write to me."
   },
-  "footer": { "rights": "© 2026 Marcos Frigerio" }
+  "footer": {
+    "rights": "© 2026 Marcos Frigerio"
+  }
 }
