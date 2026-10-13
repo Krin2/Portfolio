@@ -28,10 +28,28 @@ describe('App', () => {
     }
   })
 
-  it('muestra las 8 tarjetas de proyecto', () => {
+  it('muestra las 9 tarjetas de proyecto', () => {
     const { container } = renderApp()
     const projects = container.querySelector('#projects')!
-    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(8)
+    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(9)
+  })
+
+  it('enlaza la demo y el codigo de la biblioteca de componentes', () => {
+    const { container } = renderApp()
+    const projects = container.querySelector('#projects') as HTMLElement
+    const card = within(projects)
+      .getByRole('heading', { name: 'Biblioteca de componentes React' })
+      .closest('article') as HTMLElement
+
+    expect(within(card).getByRole('link', { name: 'Ver demo →' })).toHaveAttribute(
+      'href',
+      'https://krin2.github.io/react-component-library/',
+    )
+    expect(within(card).getByRole('link', { name: 'Ver código →' })).toHaveAttribute(
+      'href',
+      'https://github.com/Krin2/react-component-library',
+    )
+    expect(within(card).getByText('Storybook')).toBeInTheDocument()
   })
 
   it('enlaza la demo y el codigo de Graph to SQL migrator', async () => {

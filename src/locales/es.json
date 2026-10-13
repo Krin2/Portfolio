@@ -133,6 +133,11 @@
         "alt": "Grafo de películas, personas y géneros dibujado por la demo",
         "desc": "Migra un grafo estilo Neo4j a SQLite en el navegador: infiere el esquema, genera el SQL, verifica que no se pierdan datos y permite consultarlo."
       },
+      "componentLibrary": {
+        "name": "Biblioteca de componentes React",
+        "alt": "Storybook con los componentes Button, Card, Tabs y otros, en tema oscuro",
+        "desc": "Diez componentes accesibles y con tema claro/oscuro, documentados en Storybook y probados con interacciones y auditoría de accesibilidad."
+      },
       "pokedex": {
         "name": "Pokedex",
         "alt": "Captura de la Pokedex",

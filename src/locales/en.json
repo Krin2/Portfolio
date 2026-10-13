@@ -133,6 +133,11 @@
         "alt": "Graph of movies, people and genres drawn by the demo",
         "desc": "Migrates a Neo4j-style graph to SQLite in the browser: it infers the schema, generates the SQL, verifies that no data is lost and lets you query it."
       },
+      "componentLibrary": {
+        "name": "React component library",
+        "alt": "Storybook with the Button, Card, Tabs and other components in the dark theme",
+        "desc": "Ten accessible components with light/dark themes, documented in Storybook and tested with interactions and an accessibility audit."
+      },
       "pokedex": {
         "name": "Pokedex",
         "alt": "Screenshot of the Pokedex",

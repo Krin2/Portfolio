@@ -1,4 +1,5 @@
 import graphToSql from '../assets/graph-to-sql.png'
+import componentLibrary from '../assets/component-library.png'
 import pokedex from '../assets/pokedex.png'
 import weather from '../assets/clima-consola.png'
 import tables from '../assets/tablas.png'
@@ -8,7 +9,15 @@ import hmi from '../assets/hmi.jpg'
 import office from '../assets/vru2.jpg'
 
 export type ProjectId =
-  'graphToSql' | 'pokedex' | 'weather' | 'tables' | 'frigo' | 'plc' | 'hmi' | 'office'
+  | 'graphToSql'
+  | 'componentLibrary'
+  | 'pokedex'
+  | 'weather'
+  | 'tables'
+  | 'frigo'
+  | 'plc'
+  | 'hmi'
+  | 'office'
 export type ProjectGroup = 'backend' | 'frontend' | 'automation'
 
 export interface Project {
@@ -39,6 +48,14 @@ export const projects: Project[] = [
   { id: 'pokedex', group: 'backend', image: pokedex, href: 'https://krin2.github.io/pokedex/' },
   { id: 'weather', group: 'backend', image: weather, soon: true },
   { id: 'tables', group: 'backend', image: tables, href: 'https://krin2.github.io/tablas/' },
+  {
+    id: 'componentLibrary',
+    group: 'frontend',
+    image: componentLibrary,
+    href: 'https://krin2.github.io/react-component-library/',
+    repo: 'https://github.com/Krin2/react-component-library',
+    tags: ['React', 'TypeScript', 'Tailwind', 'Storybook', 'Accessibility'],
+  },
   {
     id: 'frigo',
     group: 'frontend',
