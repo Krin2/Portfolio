@@ -1,0 +1,42 @@
+/* Hoja A4 sin margenes de impresion: los espacios se resuelven dentro del documento */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  background: #fff;
+  width: 210mm;
+  margin: 0 auto;
+  font-size: 10pt;
+  line-height: 1.45;
+}
+
+/* La banda lateral es fija para repetirse en todas las paginas impresas */
+.cv-band {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 66mm;
+  background: #efe6cf;
+  z-index: -1;
+}
+
+@media screen {
+  body {
+    box-shadow: 0 0 12px rgb(0 0 0 / 0.2);
+  }
+  .cv-band {
+    left: calc(50% - 105mm);
+  }
+}
+
+.cv-item {
+  break-inside: avoid;
+}

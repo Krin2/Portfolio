@@ -1,2 +1,12 @@
 .mcp.json
 .claude/settings.local.json
+
+# Secretos: variables de entorno, claves y certificados
+.env
+.env.*
+!.env.example
+*.pem
+node_modules
+dist
+*.local
+*.tsbuildinfo
