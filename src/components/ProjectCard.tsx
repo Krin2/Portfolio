@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next'
 import type { Project } from '../data/projects'
 import { useReveal } from '../hooks/useReveal'
 
+const linkClass = 'text-accent text-sm font-medium hover:underline'
+
 export default function ProjectCard({ project }: { project: Project }) {
   const { t } = useTranslation()
   const { ref, visible } = useReveal<HTMLElement>()
@@ -36,15 +38,29 @@ export default function ProjectCard({ project }: { project: Project }) {
             ))}
           </ul>
         )}
-        {project.href && (
-          <a
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent mt-auto pt-2 text-sm font-medium hover:underline"
-          >
-            {t('projects.demo')}
-          </a>
+        {(project.href || project.repo) && (
+          <div className="mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-2">
+            {project.href && (
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                {t('projects.demo')}
+              </a>
+            )}
+            {project.repo && (
+              <a
+                href={project.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                {t('projects.code')}
+              </a>
+            )}
+          </div>
         )}
         {project.soon && (
           <span className="text-muted mt-auto pt-2 text-sm italic">{t('projects.soon')}</span>

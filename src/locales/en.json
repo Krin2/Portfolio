@@ -125,8 +125,14 @@
       "automation": "Automation"
     },
     "demo": "View demo →",
+    "code": "View code →",
     "soon": "Coming soon",
     "items": {
+      "graphToSql": {
+        "name": "Graph to SQL migrator",
+        "alt": "Graph of movies, people and genres drawn by the demo",
+        "desc": "Migrates a Neo4j-style graph to SQLite in the browser: it infers the schema, generates the SQL, verifies that no data is lost and lets you query it."
+      },
       "pokedex": {
         "name": "Pokedex",
         "alt": "Screenshot of the Pokedex",

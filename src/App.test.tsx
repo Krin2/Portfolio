@@ -28,10 +28,27 @@ describe('App', () => {
     }
   })
 
-  it('muestra las 7 tarjetas de proyecto', () => {
+  it('muestra las 8 tarjetas de proyecto', () => {
     const { container } = renderApp()
     const projects = container.querySelector('#projects')!
-    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(7)
+    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(8)
+  })
+
+  it('enlaza la demo y el codigo de Graph to SQL migrator', async () => {
+    const { container } = renderApp()
+    const projects = container.querySelector('#projects') as HTMLElement
+    const card = within(projects)
+      .getByRole('heading', { name: 'Graph to SQL migrator' })
+      .closest('article') as HTMLElement
+
+    const demo = within(card).getByRole('link', { name: 'Ver demo →' })
+    expect(demo).toHaveAttribute('href', 'https://krin2.github.io/graph-to-sql-migrator/')
+    const code = within(card).getByRole('link', { name: 'Ver código →' })
+    expect(code).toHaveAttribute('href', 'https://github.com/Krin2/graph-to-sql-migrator')
+    expect(within(card).getByText('SQLite')).toBeInTheDocument()
+
+    await userEvent.click(screen.getByRole('button', { name: 'Cambiar idioma a inglés' }))
+    expect(within(card).getByRole('link', { name: 'View code →' })).toBeInTheDocument()
   })
 
   it('cambia el idioma y actualiza el atributo lang', async () => {
