@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
 import About from './components/About'
 import Contact from './components/Contact'
+import Education from './components/Education'
+import Experience from './components/Experience'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -23,8 +25,10 @@ export default function App() {
       <Header />
       <main id="main" className="mx-auto max-w-6xl px-[clamp(1rem,4vw,2rem)]">
         <Hero />
-        <Projects />
+        <Experience />
         <Skills />
+        <Projects />
+        <Education />
         <About />
         <Contact />
       </main>

@@ -1,32 +1,120 @@
 {
   "meta": {
     "title": "Marcos Frigerio | Fullstack Developer",
-    "description": "Marcos Frigerio's portfolio: electronic engineer with 10 years in automation, now a software developer on the way to fullstack.",
-    "ogDescription": "Projects and experience of Marcos Frigerio: backend, frontend and industrial automation."
+    "description": "Marcos Frigerio's portfolio: fullstack developer experienced in React, TypeScript and Node.js, with 10 prior years in industrial automation.",
+    "ogDescription": "Experience, skills and projects of Marcos Frigerio: fullstack development and industrial automation."
   },
   "accessibility": {
     "skip": "Skip to content",
     "home": "Home",
     "mainNav": "Main",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "brandPhoto": "Photo of Marcos Frigerio",
     "themeToLight": "Switch to light mode",
     "themeToDark": "Switch to dark mode",
     "themeTitle": "Toggle theme",
     "langSwitch": "Change language to Spanish",
-    "langTitle": "Change language"
+    "langTitle": "Change language",
+    "level": "Level {{level}} of {{max}}"
   },
   "lang": { "label": "ES" },
   "nav": {
-    "projects": "Projects",
+    "experience": "Experience",
     "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
     "about": "About me",
     "contact": "Contact"
   },
   "hero": {
     "eyebrow": "Hi, I'm",
     "role": "Fullstack Developer",
-    "lead": "Electronic engineer with 10 years in industrial automation. Today I build backend software and I'm moving towards fullstack.",
+    "lead": "Electronic engineer with 10 years in industrial automation. Today I build software with React, TypeScript and Node.js for clients in the US and Europe.",
     "viewProjects": "View projects"
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "automationToggle": "Industrial automation experience",
+    "items": {
+      "freelanceUS": {
+        "role": "Software Developer - Freelance",
+        "location": "Client in the US",
+        "intro": "As a fullstack developer I have taken part in:",
+        "bullets": [
+          "Building new features using React, TypeScript, Neo4j and MariaDB as the main technologies.",
+          "Implementing improvements on an existing website.",
+          "Migrating the database from Neo4j to MySQL.",
+          "Creating scripts to verify and fix the databases.",
+          "Identifying and solving software problems, providing support to the client.",
+          "Deploying new versions of the website using AWS.",
+          "Migrating the UI to Storybook to build reusable generic components."
+        ]
+      },
+      "intive": {
+        "role": "Software Developer - Intive",
+        "location": "Projects for clients in the US",
+        "intro": "I took part in several projects following Scrum, focused on authentication, streaming and blockchain:",
+        "bullets": [
+          "<strong>Open the gate.</strong> Created and modeled objects for a streaming platform using C#, .NET and the MVC pattern.",
+          "<strong>Let them In.</strong> Took part in migrating an authentication process from Auth0 to a new one based on Firebase, using JavaScript as the main technology. Implemented integration tests using Cypress and GitHub Actions. Created a script to read and write in bulk on Firebase. We used Segment to store logs and analyze data.",
+          "<strong>BitGo.</strong> Implemented new features related to crypto assets such as Solana, Near, Avalanche and Algorand, using TypeScript and JavaScript.",
+          "<strong>MAAT.</strong> Developed features in TypeScript and NestJS to audit data using Blockchain technology."
+        ]
+      },
+      "freelanceEU": {
+        "role": "Software Developer - Freelance",
+        "location": "Client in Europe",
+        "intro": "I took part in building a Proof of Concept for a website forum. We used TypeScript, Auth0 and SQLite as the main technologies.",
+        "bullets": []
+      },
+      "renault": {
+        "role": "Automation Engineer - Renault",
+        "location": "",
+        "intro": "As an automation engineer, I was part of the projects office at Renault Team America, where I carried out the following activities:",
+        "bullets": [
+          "Analyzed the existing facilities.",
+          "Prepared technical documentation for the modernization of the paint and assembly plants.",
+          "Supervised suppliers to make sure the Renault standard was implemented correctly.",
+          "Organized and took part in meetings to define solutions that benefit the interests of production, maintenance, safety and engineering areas.",
+          "Provided technical support to production and maintenance once the new facilities were completed."
+        ]
+      },
+      "automation": {
+        "role": "Automation Specialist - SAMI, AUSI, COMAU, VMC Refrigeración, Freelance",
+        "location": "Clients in Argentina and Brazil",
+        "intro": "",
+        "bullets": [
+          "Programmed PLCs and HMIs on production lines and robotic cells for the automotive, refrigeration and Oil & Gas industries.",
+          "Took part in commissioning production lines at Ford, Fiat, General Motors and PSA Brazil.",
+          "Configured nodes, safety devices, variable speed drives, valve blocks, sensors and actuators.",
+          "Did structured cabling.",
+          "Selected instruments for explosive atmospheres in Oil & Gas projects.",
+          "Drew electrical diagrams and technical documentation using AutoCAD."
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Databases",
+      "tools": "Tools and testing",
+      "auth": "Authentication and Web3",
+      "automation": "Industrial automation"
+    },
+    "languagesTitle": "Languages",
+    "native": "(native)",
+    "languages": {
+      "es": "Spanish",
+      "en": "English",
+      "it": "Italian",
+      "pt": "Portuguese",
+      "fr": "French"
+    }
   },
   "projects": {
     "title": "Projects",
@@ -75,17 +163,17 @@
       }
     }
   },
-  "skills": {
-    "title": "Skills",
-    "backend": "Backend",
-    "automation": "Industrial automation",
-    "inProgress": "(in progress)"
+  "education": {
+    "title": "Education",
+    "degree": "Electronic Engineering",
+    "degreeOrg": "National University of Córdoba",
+    "coursesTitle": "Courses"
   },
   "about": {
     "title": "About me",
-    "p1": "I was born in the province of Salta (Argentina), studied <strong>Electronic Engineering</strong> at the National University of Córdoba and currently live in Rafaela.",
-    "p2": "I worked for 10 years as an automation specialist on various projects and companies.",
-    "p3": "Today I'm a <strong>backend developer</strong> and my goal is to become <strong>fullstack</strong>, so I'm taking a <strong>React</strong> course."
+    "p1": "I was born in the province of Salta (Argentina), studied <strong>Electronic Engineering</strong> at the National University of Córdoba and live in Rafaela.",
+    "p2": "Since 2021 I build software for clients in the US and Europe, focused on <strong>React</strong>, <strong>TypeScript</strong> and <strong>Node.js</strong>, as well as authentication, streaming and blockchain. Before that I worked for 10 years as an automation specialist programming PLCs and HMIs.",
+    "p3": "I keep learning constantly: my latest courses include Claude Code, Docker, React and NestJS."
   },
   "contact": {
     "title": "Contact",
