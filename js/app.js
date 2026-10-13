@@ -1,27 +1,33 @@
-'use stric'
+'use strict'
 
-$(document).ready( () => {
-  // vista como circulo grande el efecto del color esta dado por el blend del css
-  $('body').on({'mousemove': function(e){
-    // toma las coordenadas del cursor
-    let clientX = e.originalEvent.clientX;
-    let clientY = e.originalEvent.clientY;
-    console.log(e)
-    
-    // Asigna al div 'cursor' la posicion del mouse. El -40 es para centrar el cursor en el centro del circulo
-    $('#cursor').css({
-      'left': (clientX - 20) +'px',
-      'top': (clientY - 20) +'px'
+document.documentElement.classList.add('js')
+
+// Aparicion suave de secciones y tarjetas al hacer scroll
+const items = document.querySelectorAll('.section, .card, .hero')
+items.forEach((el) => el.classList.add('reveal'))
+
+if ('IntersectionObserver' in window) {
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible')
+        reveal.unobserve(entry.target)
+      }
     })
-  }})
+  }, { threshold: 0.1 })
+  items.forEach((el) => reveal.observe(el))
+} else {
+  items.forEach((el) => el.classList.add('visible'))
+}
 
-  // $('.a').on({
-  //   'mouseover': function () {
-  //     $('#cursor').addClass('big')
-  //   },
-  //   'mouseout': function() {
-  //     $('#cursor').removeClass('big')
-  //   }
-  // })
+// Marca el enlace del menu segun la seccion visible
+const links = document.querySelectorAll('.nav a')
+const sections = [...links].map((a) => document.querySelector(a.getAttribute('href')))
 
-})
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return
+    links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id))
+  })
+}, { rootMargin: '-40% 0px -55% 0px' })
+sections.forEach((s) => s && spy.observe(s))
