@@ -45,6 +45,23 @@ describe('App', () => {
     }
   })
 
+  it('enlaza la demo y el codigo de Frigo', () => {
+    const { container } = renderApp()
+    const projects = container.querySelector('#projects') as HTMLElement
+    const card = within(projects)
+      .getByRole('heading', { name: 'Frigo' })
+      .closest('article') as HTMLElement
+
+    expect(within(card).getByRole('link', { name: 'Ver demo →' })).toHaveAttribute(
+      'href',
+      'https://krin2.github.io/Frigo/',
+    )
+    expect(within(card).getByRole('link', { name: 'Ver código →' })).toHaveAttribute(
+      'href',
+      'https://github.com/Krin2/Frigo',
+    )
+  })
+
   it('enlaza la demo y el codigo del simulador HMI / PLC', () => {
     const { container } = renderApp()
     const projects = container.querySelector('#projects') as HTMLElement

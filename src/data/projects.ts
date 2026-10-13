@@ -51,6 +51,7 @@ export const projects: Project[] = [
     group: 'frontend',
     image: frigo,
     href: 'https://krin2.github.io/Frigo/',
+    repo: 'https://github.com/Krin2/Frigo',
     tags: ['HTML', 'CSS', 'JavaScript'],
   },
   {
