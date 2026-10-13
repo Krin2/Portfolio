@@ -143,6 +143,11 @@
         "alt": "Formulario de inicio de sesión de la demo de autenticación",
         "desc": "Registro, login, recuperación de contraseña y rutas protegidas. Funciona en el navegador o con Firebase Auth, con tests unitarios y end-to-end en Cypress."
       },
+      "hmiSimulator": {
+        "name": "Simulador HMI / PLC",
+        "alt": "Tanque con los niveles HH y H encendidos y la entrada cerrada por nivel alto-alto",
+        "desc": "Control de nivel de un tanque: programa PLC con interbloqueos y alarmas ISA-18.2, proceso simulado y una HMI de alto rendimiento, todo en TypeScript."
+      },
       "pokedex": {
         "name": "Pokedex",
         "alt": "Captura de la Pokedex",

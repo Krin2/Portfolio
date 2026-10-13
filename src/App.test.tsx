@@ -28,10 +28,28 @@ describe('App', () => {
     }
   })
 
-  it('muestra las 10 tarjetas de proyecto', () => {
+  it('muestra las 11 tarjetas de proyecto', () => {
     const { container } = renderApp()
     const projects = container.querySelector('#projects')!
-    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(10)
+    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(11)
+  })
+
+  it('enlaza la demo y el codigo del simulador HMI / PLC', () => {
+    const { container } = renderApp()
+    const projects = container.querySelector('#projects') as HTMLElement
+    const card = within(projects)
+      .getByRole('heading', { name: 'Simulador HMI / PLC' })
+      .closest('article') as HTMLElement
+
+    expect(within(card).getByRole('link', { name: 'Ver demo →' })).toHaveAttribute(
+      'href',
+      'https://krin2.github.io/hmi-plc-simulator/',
+    )
+    expect(within(card).getByRole('link', { name: 'Ver código →' })).toHaveAttribute(
+      'href',
+      'https://github.com/Krin2/hmi-plc-simulator',
+    )
+    expect(within(card).getByText('ISA-18.2')).toBeInTheDocument()
   })
 
   it('enlaza la demo y el codigo del flujo de autenticacion', () => {

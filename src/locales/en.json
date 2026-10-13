@@ -143,6 +143,11 @@
         "alt": "Log in form of the authentication demo",
         "desc": "Sign up, log in, password reset and protected routes. Works in the browser or with Firebase Auth, with unit and Cypress end-to-end tests."
       },
+      "hmiSimulator": {
+        "name": "HMI / PLC simulator",
+        "alt": "Tank with the HH and H level switches on and the inlet closed by the high-high level",
+        "desc": "Tank level control: a PLC program with interlocks and ISA-18.2 alarms, a simulated process and a high-performance HMI, all in TypeScript."
+      },
       "pokedex": {
         "name": "Pokedex",
         "alt": "Screenshot of the Pokedex",

@@ -1,6 +1,7 @@
 import graphToSql from '../assets/graph-to-sql.png'
 import componentLibrary from '../assets/component-library.png'
 import authFlow from '../assets/auth-flow.png'
+import hmiSimulator from '../assets/hmi-simulator.png'
 import pokedex from '../assets/pokedex.png'
 import weather from '../assets/clima-consola.png'
 import tables from '../assets/tablas.png'
@@ -13,6 +14,7 @@ export type ProjectId =
   | 'graphToSql'
   | 'componentLibrary'
   | 'authFlow'
+  | 'hmiSimulator'
   | 'pokedex'
   | 'weather'
   | 'tables'
@@ -72,6 +74,14 @@ export const projects: Project[] = [
     image: frigo,
     href: 'https://krin2.github.io/Frigo/',
     tags: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    id: 'hmiSimulator',
+    group: 'automation',
+    image: hmiSimulator,
+    href: 'https://krin2.github.io/hmi-plc-simulator/',
+    repo: 'https://github.com/Krin2/hmi-plc-simulator',
+    tags: ['PLC', 'HMI', 'ISA-18.2', 'ISA-101', 'React', 'TypeScript'],
   },
   { id: 'plc', group: 'automation', image: plc },
   { id: 'hmi', group: 'automation', image: hmi },
