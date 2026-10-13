@@ -138,6 +138,11 @@
         "alt": "Storybook with the Button, Card, Tabs and other components in the dark theme",
         "desc": "Ten accessible components with light/dark themes, documented in Storybook and tested with interactions and an accessibility audit."
       },
+      "authFlow": {
+        "name": "Authentication flow",
+        "alt": "Log in form of the authentication demo",
+        "desc": "Sign up, log in, password reset and protected routes. Works in the browser or with Firebase Auth, with unit and Cypress end-to-end tests."
+      },
       "pokedex": {
         "name": "Pokedex",
         "alt": "Screenshot of the Pokedex",

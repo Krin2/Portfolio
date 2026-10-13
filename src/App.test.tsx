@@ -28,10 +28,28 @@ describe('App', () => {
     }
   })
 
-  it('muestra las 9 tarjetas de proyecto', () => {
+  it('muestra las 10 tarjetas de proyecto', () => {
     const { container } = renderApp()
     const projects = container.querySelector('#projects')!
-    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(9)
+    expect(within(projects as HTMLElement).getAllByRole('article')).toHaveLength(10)
+  })
+
+  it('enlaza la demo y el codigo del flujo de autenticacion', () => {
+    const { container } = renderApp()
+    const projects = container.querySelector('#projects') as HTMLElement
+    const card = within(projects)
+      .getByRole('heading', { name: 'Flujo de autenticación' })
+      .closest('article') as HTMLElement
+
+    expect(within(card).getByRole('link', { name: 'Ver demo →' })).toHaveAttribute(
+      'href',
+      'https://krin2.github.io/auth-flow-demo/',
+    )
+    expect(within(card).getByRole('link', { name: 'Ver código →' })).toHaveAttribute(
+      'href',
+      'https://github.com/Krin2/auth-flow-demo',
+    )
+    expect(within(card).getByText('Cypress')).toBeInTheDocument()
   })
 
   it('enlaza la demo y el codigo de la biblioteca de componentes', () => {

@@ -138,6 +138,11 @@
         "alt": "Storybook con los componentes Button, Card, Tabs y otros, en tema oscuro",
         "desc": "Diez componentes accesibles y con tema claro/oscuro, documentados en Storybook y probados con interacciones y auditoría de accesibilidad."
       },
+      "authFlow": {
+        "name": "Flujo de autenticación",
+        "alt": "Formulario de inicio de sesión de la demo de autenticación",
+        "desc": "Registro, login, recuperación de contraseña y rutas protegidas. Funciona en el navegador o con Firebase Auth, con tests unitarios y end-to-end en Cypress."
+      },
       "pokedex": {
         "name": "Pokedex",
         "alt": "Captura de la Pokedex",

@@ -1,5 +1,6 @@
 import graphToSql from '../assets/graph-to-sql.png'
 import componentLibrary from '../assets/component-library.png'
+import authFlow from '../assets/auth-flow.png'
 import pokedex from '../assets/pokedex.png'
 import weather from '../assets/clima-consola.png'
 import tables from '../assets/tablas.png'
@@ -11,6 +12,7 @@ import office from '../assets/vru2.jpg'
 export type ProjectId =
   | 'graphToSql'
   | 'componentLibrary'
+  | 'authFlow'
   | 'pokedex'
   | 'weather'
   | 'tables'
@@ -55,6 +57,14 @@ export const projects: Project[] = [
     href: 'https://krin2.github.io/react-component-library/',
     repo: 'https://github.com/Krin2/react-component-library',
     tags: ['React', 'TypeScript', 'Tailwind', 'Storybook', 'Accessibility'],
+  },
+  {
+    id: 'authFlow',
+    group: 'frontend',
+    image: authFlow,
+    href: 'https://krin2.github.io/auth-flow-demo/',
+    repo: 'https://github.com/Krin2/auth-flow-demo',
+    tags: ['React', 'TypeScript', 'Firebase Auth', 'Cypress', 'GitHub Actions'],
   },
   {
     id: 'frigo',
