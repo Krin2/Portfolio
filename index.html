@@ -1,9 +1,50 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcos Frigerio | Fullstack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio de Marcos Frigerio: ingeniero electrónico con 10 años en automatización, hoy desarrollador de software en camino a fullstack."
+    />
+    <meta name="theme-color" content="#0d0d12" />
+    <script>
+      // Aplica el tema guardado (o el del sistema) antes de pintar para evitar parpadeo
+      ;(function () {
+        var t = null
+        try {
+          t = localStorage.getItem('theme')
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        }
+        document.documentElement.setAttribute('data-theme', t)
+      })()
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Marcos Frigerio | Fullstack Developer" />
+    <meta
+      property="og:description"
+      content="Proyectos y experiencia de Marcos Frigerio: backend, frontend y automatización industrial."
+    />
+    <link rel="icon" href="/src/assets/perfil.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marcos Frigerio",
+        "jobTitle": "Fullstack Developer",
+        "email": "mailto:ingmarcosfrigerio@gmail.com",
+        "sameAs": ["https://github.com/Krin2", "https://www.linkedin.com/in/marcos-frigerio/"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

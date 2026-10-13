@@ -1,21 +1,65 @@
 @import 'tailwindcss';
 
-/* Tokens del tema: colores y tipografia disponibles como bg-bg, text-muted, font-title, etc. */
-@theme {
+/* Variables por tema; el atributo data-theme lo controla ThemeProvider */
+:root {
+  --bg: #0d0d12;
+  --surface: #17171f;
+  --border: #2a2a36;
+  --text: #ececf1;
+  --muted: #a3a3b2;
+  --accent: #d4af37;
+  --accent-text: #0d0d12;
+  --header-bg: rgb(13 13 18 / 0.8);
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: #f7f7fa;
+  --surface: #ffffff;
+  --border: #dcdce5;
+  --text: #1a1a22;
+  --muted: #565665;
+  --accent: #8a6d0b;
+  --accent-text: #ffffff;
+  --header-bg: rgb(247 247 250 / 0.85);
+  color-scheme: light;
+}
+
+/* Tokens de Tailwind: bg-bg, text-muted, border-border, font-title, etc. */
+@theme inline {
   --font-title: 'Cinzel', serif;
   --font-sans: 'Inter', system-ui, sans-serif;
 
-  --color-bg: #0d0d12;
-  --color-surface: #17171f;
-  --color-border: #2a2a36;
-  --color-text: #ececf1;
-  --color-muted: #a3a3b2;
-  --color-accent: #d4af37;
-  --color-accent-text: #0d0d12;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-header: var(--header-bg);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
+  min-width: 300px;
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

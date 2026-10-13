@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Marcos Frigerio | Fullstack Developer",
+    "description": "Marcos Frigerio's portfolio: electronic engineer with 10 years in automation, now a software developer on the way to fullstack.",
+    "ogDescription": "Projects and experience of Marcos Frigerio: backend, frontend and industrial automation."
+  },
+  "accessibility": {
+    "skip": "Skip to content",
+    "home": "Home",
+    "mainNav": "Main",
+    "brandPhoto": "Photo of Marcos Frigerio",
+    "themeToLight": "Switch to light mode",
+    "themeToDark": "Switch to dark mode",
+    "themeTitle": "Toggle theme",
+    "langSwitch": "Change language to Spanish",
+    "langTitle": "Change language"
+  },
+  "lang": { "label": "ES" },
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About me",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Hi, I'm",
+    "role": "Fullstack Developer",
+    "lead": "Electronic engineer with 10 years in industrial automation. Today I build backend software and I'm moving towards fullstack.",
+    "viewProjects": "View projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "groups": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "automation": "Automation"
+    },
+    "demo": "View demo →",
+    "soon": "Coming soon",
+    "items": {
+      "pokedex": {
+        "name": "Pokedex",
+        "alt": "Screenshot of the Pokedex",
+        "desc": "Pokémon search tool that consumes a public API."
+      },
+      "weather": {
+        "name": "Weather-console",
+        "alt": "Screenshot of the console weather app",
+        "desc": "Console application to check the weather."
+      },
+      "tables": {
+        "name": "Tables by command",
+        "alt": "Screenshot of Tables by command",
+        "desc": "Table generation from commands."
+      },
+      "frigo": {
+        "name": "Frigo",
+        "alt": "Screenshot of the Frigo project",
+        "desc": "Built with plain HTML, CSS and JavaScript."
+      },
+      "plc": {
+        "name": "PLC Programming",
+        "alt": "Control panel with a PLC",
+        "desc": "Controller programming for industrial processes."
+      },
+      "hmi": {
+        "name": "HMI Development",
+        "alt": "Industrial HMI screen",
+        "desc": "Design of human-machine interfaces."
+      },
+      "office": {
+        "name": "Project Office",
+        "alt": "Project office",
+        "desc": "Project management and technical documentation."
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "backend": "Backend",
+    "automation": "Industrial automation",
+    "inProgress": "(in progress)"
+  },
+  "about": {
+    "title": "About me",
+    "p1": "I was born in the province of Salta (Argentina), studied <strong>Electronic Engineering</strong> at the National University of Córdoba and currently live in Rafaela.",
+    "p2": "I worked for 10 years as an automation specialist on various projects and companies.",
+    "p3": "Today I'm a <strong>backend developer</strong> and my goal is to become <strong>fullstack</strong>, so I'm taking a <strong>React</strong> course."
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Have a project or want to chat? Write to me."
+  },
+  "footer": { "rights": "© 2026 Marcos Frigerio" }
+}
